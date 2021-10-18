@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employment Outlook</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,200;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+ <div class="page">
+
+
+    <!-- pure grid group -->
+     <div class="pure-g">
+       <div class="pure-u-1-1">
+         <h1>Employment Outlook</h1>
+         <p></p>
+       </div>
+     </div>
+   <!-- end pure grid group -->
+
+   <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>Employee Rates in Australia</h2>
+        <p>The geography of jobs map is a dynamic visualizaton of employee rates from 2003 to 2019
+           for every states in Australia. <br>
+           Using the slide bar to see the trend.</p>
+      </div>
+    </div>
+  <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis2" class="vis-container"></div>
+          
+        </div>
+    </div>
+
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <p> <span class='decrease_text'>Australian Capital Territory</span> provides the highest number of jobs in Australia,
+           followed by <span class='map2_text'>New South Wales</span> and<span class='map2_text'> Victoria</span> .</p>
+        <p>The employment rate in <span class='decrease_text'>Australian Capital Territory</span> stood 
+          at <span class='decrease_text'>13%</span> in 2019, far higher than any other states.</p>
+        <p>Competition for jobs is fierce in <span class='map_text'>Western Australia</span> in 2019, which has the lowest employment rate in Australia.
+           With only <span class='map_text'>2 out of every 1,000 people</span> are able to find a work.</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>Week Salary by Industry</h2>
+        <p>The following two bar charts indicate the top five industries 
+          with the highest weekly salary and the top five industries with the lowest weekly salary.</p><br>
+      </div>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1" >
+        <div id="vis6"  class="vis-container" ></div>
+      </div>
+  </div>
+
+
+  <!-- end pure grid group -->    
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1" >
+        <div id="vis5"  class="vis-container" ></div>
+      </div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1-1">
+      <p>The industry with the highest weekly salary in 2021 is,
+         followed by. 
+         The industry with the lowest weekly salary is.</p>
+    </div>
+  <!-- end pure grid group -->
+  
+  
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>Changes in the number of jobs before and after Covid-19</h2>
+        <p>It can be seen that due to the COVID-19, the number of jobs in <span class='increase_text'>health care and social assistance</span> increased by <span class='increase_text'>16K</span>, 
+          while the demand for jobs in <span class='decrease_text'>education and training</span> decreased by <span class='decrease_text'>15K</span>.</p>
+        <p>The demand for jobs related to <span class='highlight_text'>professional, scientific  and technical services </span>
+        are unaffected by COVID-19.</p>
+        </div>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis3"  class="vis-container" style="text-align:center"></div>
+        </div>
+      
+    </div>
+
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>Average Weekly Salary &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Job Sector By Industry</h2>
+      </div>
+    <!-- end pure grid group -->
+    <div class="outer">
+      <div class="pure-u-2-3">
+          <div id="vis1"  class="vis-container" style="text-align:center"></div>
+      </div>
+      <div class="pure-u-2-3">
+
+          <p style="text-align:left">The average weekly salary for Australians in 2020 was $1,538, 
+            which increased <span class='highlight_text'>$301.2</span> since 2011.
+            Average weekly salary increased by <span class='highlight_text'>24.3% </span>over a decade
+            <br><br>
+            It can be seen that the COVID-19 has had no negative impact on average weekly earnings.</p>
+      
+          </div>
+      <div class="pure-u-2-3">
+          <div id="vis4"  class="vis-container" style="text-align:center"></div>
+      </div>
+      <div class="pure-u-2-3">
+
+          <p style="text-align:left">As can be seen from the left figure, <span class='highlight_text'>education industry</span> and 
+            <span class='highlight_text'>public administration & safety</span> accounted for the most jobs in Australia, 
+            each accounting for around 31%, followed by <span class='highlight_text'>health-related field</span> 
+            which accounts for 26.6%.</p>
+      </div>
+  </div>
+
+
+
+  <!-- end pure grid group -->
+
+
+  </div>
+
+  </div> <!-- end page -->
+  <div class="pure-g">
+    <div class="pure-u-1-1 small-font">
+      <c>This visualisation is created by <a href="https://github.com/KadekSatriadi" target="_blank">Yutong Xu</a>. The datasource is <a href="#"" target="_blank">www.abs.gov.au</href>.</c>
+    </div>
+  </div>
+</div>
+   
+<script type="text/javascript">
+  var specVis1 = "./linechart_salary.json";
+  var specVis2= "./map_states.json";
+  var specVis4= "./piechart_industry.json";
+  var specVis3= "./diverging_barchart.json";
+  var specVis5= "./barchart_bottom10.json";
+  var specVis6= "./barchart_top10.json";
+
+  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis6', specVis6, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+</body>
+</html>

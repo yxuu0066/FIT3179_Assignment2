@@ -1,0 +1,103 @@
+h1 {
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 0, 600;
+  font-size: 50px;
+}
+
+h2 {
+  text-align: left;
+  font-family: 'Montserrat';
+  font-weight: 0, 400;
+  font-size: 28px;
+}
+
+p {
+  text-align: left;
+  font-family: 'Montserrat';
+  font-weight: 1, 200;
+  font-size: 17px;
+}
+
+body {
+  background-color: #f0efeb;
+}
+.page {
+  width: 1000px;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 50px;
+  padding-top: 35px;
+}
+.vis-container {
+  width: 100%;
+}
+.description h2,
+h1 {
+  margin-top: 0px;
+  font-family: 'Montserrat';
+  font-weight: 0, 400;
+  font-size: 50px;
+  text-decoration: underline overline;
+}
+.description-right {
+  padding-left: 20px;
+}
+.description-left {
+  padding-right: 20px;
+}
+.pure-g {
+  margin-bottom: 25px;
+}
+.small-font {
+  font-family: 'Montserrat';
+  font-size: 20px;
+}
+
+.pure-u-2-3 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pure-u-2-4 {
+  text-align: center;
+}
+
+.outer {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.highlight_text {
+  color: #9e2a2b;
+  font-weight: bold;
+}
+
+.increase_text {
+  color: #f9c74f;
+  font-weight: bold;
+}
+
+.decrease_text {
+  color: #14213d;
+  font-weight: bold;
+}
+
+.map_text {
+  color: #e4cf9b;
+  font-weight: bold;
+}
+
+.map2_text {
+  color: #e09f3e;
+  font-weight: bold;
+}
+
+c {
+  text-align: right;
+  font-family: 'Montserrat';
+  font-weight: 1, 200;
+  font-size: 13px;
+}

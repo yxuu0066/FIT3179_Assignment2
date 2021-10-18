@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple pie chart with labels.",
+  "data": {
+    "values": [
+      {"category": "Public administration and safety", "value": 31.2},
+      {"category": "Education and training", "value": 31.1},
+      {"category": "Health care and social assistance", "value": 26.6},
+      {"category": "Other industries", "value": 11.1}
+    ]
+  },
+  "encoding": {
+    "radius": {"field": "value", "type": "quantitative", "scale": {"type": "sqrt", "zero": true, "range": [40, 100]}},
+    "theta": {"field": "value", "type": "quantitative", "stack": true},
+    "color": {"field": "category", "type": "nominal","title": "Industry",          "scale": {
+      "range": ["#14213d","#ffe6a1","#e09f3e","#9e2a2b"],
+      "type": "sequential" }},
+    "tooltip": [
+      {"field": "category", "type": "nominal" ,"title": "Industry"},
+      {"field": "value", "type": "quantitative", "title": "Proportion(%)"}
+    ]
+  },
+  "layer": [
+    {
+    "mark": {"type": "arc","innerRadius": 20, "outerRadius": 100,"color":"#14213d","fontSize": 15}
+  },{
+    "mark": {"type": "text", "radiusOffset": 10, "fill": "#202630"},
+    "encoding": {
+      "radius": {"field": "value", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
+      "theta": {"field": "value", "type": "quantitative", "stack": true},
+      "text": {"field": "value", "type": "quantitative","formatType": "percentage"}
+      
+    }
+  }],
+  "config": {
+    "legend": {"labelFontSize":11,"orient":"none","direction":"vertical","legendX":50,"legendY":210},
+    "view": {"stroke": null}
+  }
+}

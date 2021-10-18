@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width":250,
+  "description": "Average Weekly Salary (2010-2021)",
+  "title": "Average Weekly Salary (2010-2021)",
+  "data": {"url":
+"https://raw.githubusercontent.com/yxuu0066/FIT3179_HW10/main/average%20weekly%20salary.csv"},
+
+"transform":[
+ {"calculate": "'$' + datum['Average weekly salary']",
+ "as": "text_annotation"
+ }],
+
+"layer":[
+
+  {"mark": {
+    "type": "text",
+    "color": "#9e2a2b",
+    "fontSize": 11,
+    "dx": 130,
+    "dy":-80 },
+  "encoding": {
+    "text": {"field": "text_annotation"},
+    "opacity": {
+      "condition": {"test": "datum['Year'] == '2020'","value": 1 },"value": 0}}
+    },
+
+    {"mark": {
+      "type": "text",
+      "color": "#9e2a2b",
+      "fontSize": 11,
+      "dx": -100,
+      "dy":-30 },
+    "encoding": {
+      "text": {"field": "text_annotation"},
+      "opacity": {
+        "condition": {"test": "datum['Year'] == '2010'","value": 1 },"value": 0}}
+      },
+
+{
+
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": false,
+      "fill": "white"
+    }
+  },
+
+  "selection": {
+    "continent_highlight": {
+      "type": "multi",
+"fields": ["Category"],
+  "bind": "legend"
+}
+},
+
+  "encoding": {
+    "x": {"field": "Year","type": "ordinal"},
+    "y": {"title":null,"field": "Average weekly salary", "type": "quantitative"},
+    "color": {"field": "Category",
+    "legend":null,
+    "type": "nominal",
+    "scale": {
+      "type": "ordinal",
+      "range": ["#14213d"]}
+  },
+    "opacity": {
+      "condition": {"selection": "continent_highlight", "value": 1},
+      "value": 0.2
+},
+      "tooltip": [
+      {"field": "Category", "type": "nominal"},
+      {"field": "Year", "type": "quantitative", "format": ","},       
+      {"field": "Average weekly salary", "type": "quantitative", "format": ","} 
+]
+  }}
+
+  ],
+  
+  "config": {
+    "view": {"stroke": null},
+    "axisX": {"grid": false}
+  }
+
+}
